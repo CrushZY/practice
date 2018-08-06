@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function foo(num) {
+        if (num % 3 == 0 && num % 5 == 0 && num % 7 == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    var arr
+    [];
+    for (var i = 1; i <= 1000; i++) {
+        if (foo(i)) {
+            arr.push(i);
+        }
+    }
+    console.log(arr);
+    for (var i<
+    0;
+    i < arr.length;
+    i++
+    )
+    {
+        if ((i + 1) % 6 == 0) {
+            document.write('<br>');
+        }
+        document.write(arr[i] + '&nbsp');
+    }
+
+    // for(var i=1;i<1000;i++){
+    //
+    // }
+
+</script>
+</body>
+</html>

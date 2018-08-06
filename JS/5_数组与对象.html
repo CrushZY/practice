@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [5, 'xxx', true, undefined, 10];
+    console.log(arr[0]);
+
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+    console.log(arr);
+
+
+    var arr2 = new Array(2);
+    console.log(arr2);
+
+    var student = {
+        name: 'zhangsan',
+        age: 18,
+        school: '黑大'
+        coding: function () {
+            console.log('xuexi')
+        }
+    }
+    console.log(student.school);//输出对象某个属性；
+    student.coding();//对象.方法：调用对象里的方法；
+
+    var obj1=new Object();
+    obj1.name='zhangsan';
+    obj1.age=21;
+    obj1.school='黑大';
+    console.log(obj1);
+
+</script>
+</body>
+</html>
