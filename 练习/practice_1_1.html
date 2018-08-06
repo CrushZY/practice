@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //随机生成两个小数给变量x.y，然后显示这两个数中的最大值。
+    // （提示：语句“var x=Math.random();”可为变量生成一个随机小数：另外，使用条件运算符‘'?:")
+    var x = Math.random();
+    console.log("x="+x);
+    var y = Math.random();
+    console.log("y="+y);
+    x > y ? console.log(x) : console.log(y);
+
+
+
+
+    function getMax(x,y) {
+        return x>y?x:y;
+    }
+    var x = Math.random();
+    var y = Math.random();
+    var max=getMax(x,y);
+    document.write('当前随机数是x='+x+',y='+y+'其中最大值是：'+max);
+
+
+
+    //在一定范围内产生一个随机数（如：在0~36之间）
+    //0<Math.random()<1
+    //0<Math.random()*37<37
+    console.log(Math.random());
+    var lucky='';
+    for (var i=0;i<7;i++){
+        lucky+=Math.floor(Math.random()*37)+' ';//floor:向下取整；
+    }
+    document.write('机选号码为：'+lucky);
+</script>
+</body>
+</html>

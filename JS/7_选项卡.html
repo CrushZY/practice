@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #menu .item{
+            width: 120px;
+            height: 30px;
+            background-color: #cccccc;
+            float: left;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #container{
+            width: 400px;
+            height: 300px;
+            border: 1px solid;
+            margin: 100px auto;
+        }
+        #menu{
+            border-bottom: 1px solid;
+        }
+        #menu .menu-selected{
+            background-color: #000000;
+            color: #fff;
+        }
+        #content div{
+            display: none;
+        }
+        #content .content-selected{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="menu" class="clearfix">
+        <li class="item menu-selected">111</li>
+        <li class="item">222</li>
+        <li class="item">333</li>
+    </ul>
+    <div id="content">
+        <div class="content-selected">001</div>
+        <div>002</div>
+        <div>003</div>
+    </div>
+</div>
+
+<script>
+   var oMenu=document.getElementById('menu');
+   var aLi=oMenu.getElementsByTagName('li');
+   var oContent=document.getElementById('content');
+   var aDiv=oContent.getElementsByTagName('div');
+
+   for(var i=0;i<aLi.length;i++){
+       aLi[i].index=i;
+       aLi[i].onclick=function () {
+           for(var j=0;j<aLi.length;j++){
+               aLi[j].className='item';
+               aDiv[j].className='';
+           }
+           this.className+=' menu-selected';
+           aDiv[this.index].className='content-selected';
+       };
+   }
+</script>
+</body>
+</html>

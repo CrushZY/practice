@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="nav">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+<script>
+    var aLi=document.querySelectorAll('#nav li');
+    for (var i=0;i<aLi.length;i++){
+        (function (idx) {
+            aLi[idx].onclick=function () {
+                console.log(idx);
+            };
+        })(i);
+
+    }
+
+    var aLi=document.querySelectorAll('#nav li');
+    for (let i=0;i<aLi.length;i++){
+        aLi[i].onclick=function () {
+            console.log(i);
+        }
+
+
+    }
+
+    function fn1() {
+        return function fn2() {
+            var a=5;
+            return a;
+        }
+    }
+    console.log(fn1()());
+
+
+    console.log('1=='+a);
+    var a=5;
+    function a() {
+        console.log('2=='+a);
+    }
+    a();
+    console.log('3=='+a);
+</script>
+1gjigbkls
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sum(x, y) {//形式参数
+        console.log(x + y);
+    }//函数的声明；
+    sum(3, 4);//实参；
+    sum(5, 6);// 函数的调用；
+
+    var fn1=function(){
+        console.log('fn1');
+    }
+    fn1();
+    //只能在后面调用；
+
+    function fn2(){
+        console.log('fn2');
+    }
+    fn2();
+    
+    function  fn3() {
+
+    }
+    //在前面调用或者在后面调用都可以；
+</script>
+</body>
+</html>

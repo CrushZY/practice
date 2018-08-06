@@ -1,0 +1,38 @@
+@mixin xx{
+  width:200px;
+  height:200px;
+  background:#ccc
+}
+#div{
+  @include xx;
+}
+@function foo($arg){
+  @if($arg==1){
+    @return #ca0675
+  }@else if($arg){
+    @return #5fc32d
+  }@else{
+  @return #ccc
+}
+
+}
+
+
+$column:12;
+@for $i from 1 through $column{
+  .col-lg-#{$i}{
+    width: percentage($i/100);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
